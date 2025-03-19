@@ -53,7 +53,7 @@
                 user.currentSubMission >
                 currentMission.subMissions.length + 1
             ) {
-                alert("Tahniah! Anda telah menamatkan misi ini.");
+                alert("Tahniah! Anda telah menamatkan misi ini 🎉.");
                 window.location.href = base + "/dashboard";
             }
         } else {

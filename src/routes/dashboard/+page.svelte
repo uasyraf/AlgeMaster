@@ -23,7 +23,7 @@
             <div
                 class="absolute inset-0 bg-silver-800 bg-opacity-50 z-50 flex items-center justify-center"
             >
-                <img src="{base}/lock.png" alt="Mission Locked" />
+                <img src="{base}/lock.png" alt="Game Locked" />
             </div>
         {/if}
         <div class="relative h-full z-0">
@@ -68,15 +68,15 @@
             <div class="flex w-full gap-4">
                 {@render card(
                     "Tonton dan pelajari",
-                    `/standard-pembelajaran/${mission.id}/notes`,
-                    "/Learning Bear.png",
+                    base + `/standard-pembelajaran/${mission.id}/notes`,
+                    base + "/Learning Bear.png",
                     true,
                     "bg-calm-green",
                 )}
                 {@render card(
                     "Permainan",
-                    `/standard-pembelajaran/${mission.id}/games`,
-                    "/Learning Elephant.png",
+                    base + `/standard-pembelajaran/${mission.id}/games`,
+                    base + "/Learning Elephant.png",
                     hasAccessToMission(mission.id),
                     "bg-calm-purple",
                 )}
