@@ -2,6 +2,7 @@
     import { userStore, hasAccessToMission } from "../../stores/user.js";
     import { missions } from "../../lib/missions.js";
     import { onDestroy, onMount } from "svelte";
+    import { base } from "$app/paths";
 
     let user = $state();
 
@@ -22,7 +23,7 @@
             <div
                 class="absolute inset-0 bg-silver-800 bg-opacity-50 z-50 flex items-center justify-center"
             >
-                <img src="/lock.png" alt="Mission Locked" />
+                <img src="{base}/lock.png" alt="Mission Locked" />
             </div>
         {/if}
         <div class="relative h-full z-0">
@@ -42,13 +43,13 @@
     >
         <div class="flex gap-4 place-content-center min-w-[80%]">
             <div class="flex place-items-center gap-2">
-                <img class="size-6" src="/Score.png" alt="Skor" />
+                <img class="size-6" src="{base}/Score.png" alt="Skor" />
                 <p>
                     {user.score}
                 </p>
             </div>
             <div class="flex place-items-center gap-2">
-                <img class="size-6" src="/trophy.png" alt="Trophies" />
+                <img class="size-6" src="{base}/trophy.png" alt="Trophies" />
                 <p>
                     {user.badges.length}
                 </p>

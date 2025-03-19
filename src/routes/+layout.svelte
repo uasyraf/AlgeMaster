@@ -6,6 +6,7 @@
   import { userStore } from "../stores/user.js";
   import { page } from "$app/state";
   import { goto } from "$app/navigation";
+  import { base } from "$app/paths";
 
   let { children } = $props();
   let user = $state();
@@ -26,7 +27,8 @@
         }
       }
 
-      if (!user.loggedIn && page.route.id !== "/") window.location.href = "/";
+      if (!user.loggedIn && page.route.id !== base + "/")
+        window.location.href = base + "/";
     }
     hasMounted = true;
   });
@@ -34,7 +36,7 @@
   async function handleLogout() {
     user.loggedIn = false;
     localStorage.setItem("userData", JSON.stringify(user));
-    window.location.href = "/";
+    window.location.href = base + "/";
   }
 </script>
 
@@ -58,13 +60,13 @@
       </div>
       <div>
         {#if user.loggedIn}
-          {#if page.route.id === "/dashboard"}
+          {#if page.route.id === base + "/dashboard"}
             <h1>Laman Utama</h1>
-          {:else if page.route.id === "/standard-pembelajaran/[slug]/games"}
+          {:else if page.route.id === base + "/standard-pembelajaran/[slug]/games"}
             <h1 class="text-white">Permainan</h1>
-          {:else if page.route.id === "/standard-pembelajaran/[slug]/notes"}
+          {:else if page.route.id === base + "/standard-pembelajaran/[slug]/notes"}
             <h1>Pembelajaran</h1>
-          {:else if page.route.id === "/teacher"}
+          {:else if page.route.id === base + "/teacher"}
             <h1>Teacher</h1>
           {/if}
         {/if}
@@ -85,13 +87,13 @@
       >
         <ul class="flex">
           <li class="w-full p-4">
-            <a href="/dashboard" class="hover:text-gray-400">
+            <a href="{base}/dashboard" class="hover:text-gray-400">
               <p class="text-center">Rumah</p>
             </a>
           </li>
           <li class="w-full p-4">
             <a
-              href="/standard-pembelajaran/{user.currentMission}/notes"
+              href="{base}/standard-pembelajaran/{user.currentMission}/notes"
               class="hover:text-gray-400"
             >
               <p class="text-center">Belajar</p>
@@ -99,7 +101,7 @@
           </li>
           <li class="w-full p-4">
             <a
-              href="/standard-pembelajaran/{user.currentMission}/games"
+              href="{base}/standard-pembelajaran/{user.currentMission}/games"
               class="hover:text-gray-400"
             >
               <p class="text-center">Bermain</p>

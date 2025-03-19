@@ -4,6 +4,7 @@
   import { browser } from "$app/environment";
   import { goto } from "$app/navigation";
   import { onDestroy, onMount } from "svelte";
+  import { base } from "$app/paths";
 
   let user = $state();
 
@@ -12,7 +13,7 @@
   });
 
   onMount(() => {
-    if (user.loggedIn) goto("/dashboard");
+    if (user.loggedIn) goto(base + "/dashboard");
   });
 
   let username = $state();
@@ -25,7 +26,7 @@
     }
     user.loggedIn = true;
     localStorage.setItem("userData", JSON.stringify(user));
-    window.location.href = "/dashboard";
+    window.location.href = base + "/dashboard";
   }
 </script>
 
@@ -34,7 +35,7 @@
     <div
       class="flex place-content-center overflow-clip border-2 border-primary-800 w-[400px] h-[400px] rounded-[50%]"
     >
-      <img class="object-cover" src="/Dinosaur.svg" alt="Playful Children" />
+      <img class="object-cover" src="{base}/Dinosaur.svg" alt="Playful Children" />
     </div>
   </div>
   <form onsubmit={handleLogin}>

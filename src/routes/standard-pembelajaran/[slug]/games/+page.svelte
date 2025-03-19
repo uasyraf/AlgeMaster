@@ -5,6 +5,7 @@
     import { page } from "$app/stores";
     import { onDestroy, onMount } from "svelte";
     import { get } from "svelte/store";
+    import { base } from "$app/paths";
 
     let user = $state();
     let currentMission = $state();
@@ -15,7 +16,8 @@
 
     onMount(() => {
         let current = document.body.style["background-image"];
-        document.body.style["background-image"] = "url('/pohon-ilmu.png')";
+        document.body.style["background-image"] =
+            `url('${base}/pohon-ilmu.png')`;
         setMission();
         setSubmission();
         return () => (document.body.style["background-image"] = current);
@@ -52,7 +54,7 @@
                 currentMission.subMissions.length + 1
             ) {
                 alert("Tahniah! Anda telah menamatkan misi ini.");
-                window.location.href = "/dashboard";
+                window.location.href = base + "/dashboard";
             }
         } else {
             alert("Cuba lagi!");
@@ -64,13 +66,13 @@
     <div class="cloud w-[30vw] p-6 rounded-[8rem] bg-white mb-16">
         <div class="flex gap-4 place-content-center min-w-[80%]">
             <div class="flex place-items-center gap-2">
-                <img class="size-6" src="/Score.png" alt="Skor" />
+                <img class="size-6" src="{base}/Score.png" alt="Skor" />
                 <p>
                     {user.score}
                 </p>
             </div>
             <div class="flex place-items-center gap-2">
-                <img class="size-6" src="/trophy.png" alt="Trophies" />
+                <img class="size-6" src="{base}/trophy.png" alt="Trophies" />
                 <p>
                     {user.badges.length}
                 </p>
