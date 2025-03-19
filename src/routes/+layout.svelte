@@ -27,6 +27,9 @@
         }
       }
 
+      console.log("gag", page.route.id);
+      console.log(base);
+
       if (!user.loggedIn && page.route.id !== base + "/")
         window.location.href = base + "/";
     }
