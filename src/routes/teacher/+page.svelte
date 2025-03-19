@@ -1,6 +1,6 @@
 <!-- src/routes/teacher.svelte - Dashboard untuk Guru -->
 <script>
-    import { userStore } from "../stores/user.js";
+    import { userStore } from "../../stores/user.js";
     let user;
     userStore.subscribe((val) => (user = val));
 

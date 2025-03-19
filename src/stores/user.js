@@ -1,30 +1,45 @@
 // src/stores/user.js
-import { writable } from 'svelte/store';
+import { missions } from "$lib/missions";
+import { writable, get } from "svelte/store";
 
-// Keadaan awal pengguna (belum log masuk atau mula bermain)
 const defaultUser = {
-  name: '',
-  role: 'student',
+  name: "",
+  role: "student",
   loggedIn: false,
-  currentMission: 1,    // Misi semasa yang sedang dimainkan
-  score: 0,             // Jumlah markah yang dikumpul
-  badges: []            // Senarai lencana yang diperoleh
+  currentMission: 1,
+  currentSubMission: 1,
+  score: 0,
+  badges: []
 };
 
 export const userStore = writable(defaultUser);
 
-// Fungsi untuk dipanggil apabila pengguna menamatkan satu misi
 export function completeMission(isCorrect) {
   userStore.update(user => {
     if (isCorrect) {
-      // Jika jawapan misi adalah betul, tingkatkan markah dan misi
-      user.score += 10;                   // +10 mata bagi setiap misi berjaya
-      user.currentMission += 1;           // pergi ke misi seterusnya
-      // Beri lencana jika memenuhi syarat (contoh: skor mencapai 50)
-      if (user.score >= 50 && !user.badges.includes('Pencapaian Algebra Tahap 1')) {
-        user.badges.push('Pencapaian Algebra Tahap 1');
+      user.score += 10;
+
+
+      let currentMission = missions.find((m) => m.id === user.currentMission);
+
+      if (user.currentSubMission + 1 < currentMission.subMissions.length + 1) {
+        user.currentSubMission++;
+      } else {
+        if (user.currentMission + 1 < missions.length + 1) {
+          user.currentMission++;
+          user.currentSubMission = 1;
+        }
+      }
+
+      if (user.score >= 50 && !user.badges.includes("Pencapaian Algebra Tahap 1")) {
+        user.badges.push("Pencapaian Algebra Tahap 1");
       }
     }
     return user;
   });
+}
+
+export function hasAccessToMission(missionId) {
+  const user = get(userStore);
+  return missionId <= user.currentMission;
 }

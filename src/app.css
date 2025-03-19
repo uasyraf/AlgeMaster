@@ -1,1 +1,157 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "Gotham Black";
+    src: url("/fonts/gothamblack-webfont.otf") format("woff2");
+}
+
+@font-face {
+    font-family: "Gotham Bold";
+    src: url("/fonts/gothambold-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Gotham Book";
+    src: url("/fonts/gothambook-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Gotham Light";
+    src: url("/fonts/gothamlight-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Gotham Medium";
+    src: url("/fonts/gothammedium-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Gotham Thin";
+    src: url("/fonts/gothamthin-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Gotham Ultra";
+    src: url("/fonts/gothamultra-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Gotham XLight";
+    src: url("/fonts/gothamxlight-webfont.woff2") format("woff2");
+}
+
+@theme {
+    --color-primary-50: #fbf5f2;
+    --color-primary-100: #f5e7df;
+    --color-primary-200: #eaccbe;
+    --color-primary-300: #dda994;
+    --color-primary-400: #ce8069;
+    --color-primary-500: #c4624b;
+    --color-primary-600: #b64e40;
+    --color-primary-700: #973e37;
+    --color-primary-800: #7a3432;
+    --color-primary-900: #632d2b;
+    --color-primary-950: #351515;
+    --color-secondary-50: #fdf6ed;
+    --color-secondary-100: #f9e5cc;
+    --color-secondary-200: #f3c994;
+    --color-secondary-300: #eb9f4a;
+    --color-secondary-400: #e98c36;
+    --color-secondary-500: #e16b1f;
+    --color-secondary-600: #c74c18;
+    --color-secondary-700: #a53318;
+    --color-secondary-800: #872919;
+    --color-secondary-900: #6f2218;
+    --color-secondary-950: #3f0f09;
+    --color-silver-50: #f7f7f7;
+    --color-silver-100: #ededed;
+    --color-silver-200: #dfdfdf;
+    --color-silver-300: #c4c4c4;
+    --color-silver-400: #adadad;
+    --color-silver-500: #999999;
+    --color-silver-600: #888888;
+    --color-silver-700: #7b7b7b;
+    --color-silver-800: #676767;
+    --color-silver-900: #545454;
+    --color-silver-950: #363636;
+    --color-black: #000000;
+    --color-calm-orange: #EB9F4A;
+    --color-calm-green: #77B29F;
+    --color-calm-purple: #AB70DF;
+    --color-calm-blue: #6884F6;
+    --color-calm-yellow: #ECC055;
+
+    --font-base: "Gotham Medium";
+    --font-base-light: "Gotham Light";
+    --font-fun: "Ribeye", sans-serif;
+
+    --text-size-xs: 0.75rem;
+    --text-size-sm: 0.875rem;
+    --text-size-base: 1rem;
+    --text-size-lg: 1.125rem;
+    --text-size-xl: 1.25rem;
+    --text-size-2xl: 1.5rem;
+    --text-size-3xl: 1.875rem;
+    --text-size-4xl: 2.25rem;
+    --text-size-5xl: 3rem;
+    --text-size-6xl: 3.75rem;
+    --text-size-7xl: 4.5rem;
+    --text-size-8xl: 6rem;
+    --text-size-9xl: 8rem;
+}
+
+body {
+    @apply bg-primary-100 text-black font-base text-size-base;
+}
+
+main {
+    @apply p-4
+}
+
+footer {
+    @apply p-8
+}
+
+h1 {
+    @apply text-size-4xl font-bold;
+}
+
+h2 {
+    @apply text-size-3xl font-semibold;
+}
+
+h3 {
+    @apply text-size-2xl font-semibold;
+}
+
+h4 {
+    @apply text-size-xl font-semibold;
+}
+
+h5 {
+    @apply text-size-lg font-semibold;
+}
+
+p {
+    @apply text-size-base;
+}
+
+header {
+    @apply flex place-content-evenly pt-16 pb-4;
+}
+
+.input-primary-base {
+    @apply h-8 text-size-xl rounded-2xl bg-white px-3 py-2 font-base;
+}
+
+.input-secondary-base {
+    @apply h-8 text-size-xl rounded-2xl bg-white px-3 py-2 font-base;
+}
+
+.input-primary-lg {
+    @apply h-16 text-size-2xl rounded-3xl bg-white px-3 py-2 font-base;
+}
+
+.input-secondary-lg {
+    @apply h-16 text-size-2xl rounded-3xl bg-white px-3 py-2 font-base;
+}

@@ -20,6 +20,7 @@
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.0.14",
+		"melt": "^0.17.3",
 		"tailwindcss": "^4.0.14"
 	}
 }

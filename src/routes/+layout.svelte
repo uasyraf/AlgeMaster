@@ -1,68 +1,121 @@
 <!-- src/routes/__layout.svelte (layout global untuk seluruh app) -->
 <script>
-    import { onMount } from 'svelte';
-    import { browser } from '$app/environment';
-    import { userStore } from '../stores/user.js';
-    let user;
-    userStore.subscribe(value => { user = value; });
+  import "../app.css";
+  import { onMount } from "svelte";
+  import { browser } from "$app/environment";
+  import { userStore } from "../stores/user.js";
+  import { page } from "$app/state";
+  import { goto } from "$app/navigation";
 
-    onMount(() => {
-      // Mendapatkan data kemajuan dari localStorage (jika ada) supaya kemajuan tersimpan di antara sesi
-      if (browser) {
-        const saved = localStorage.getItem('userData');
-        if (saved) {
-          userStore.set(JSON.parse(saved));
+  let { children } = $props();
+  let user = $state();
+  let hasMounted = $state(false);
+
+  userStore.subscribe((value) => {
+    user = value;
+  });
+
+  onMount(() => {
+    if (browser) {
+      const saved = localStorage.getItem("userData");
+
+      if (saved) {
+        userStore.set(JSON.parse(saved));
+        if (user.name.length === 0) {
+          localStorage.setItem("userData", JSON.stringify(user));
         }
-        // Simpan setiap perubahan data user ke localStorage
-        userStore.subscribe(val => {
-          localStorage.setItem('userData', JSON.stringify(val));
-        });
       }
-    });
-  </script>
 
+      if (!user.loggedIn && page.route.id !== "/") window.location.href = "/";
+    }
+    hasMounted = true;
+  });
+
+  async function handleLogout() {
+    user.loggedIn = false;
+    localStorage.setItem("userData", JSON.stringify(user));
+    window.location.href = "/";
+  }
+</script>
+
+<div class="flex flex-col min-h-screen">
   <header>
-    <h1>🎮 AlgeMaster: Algebra Made Easy</h1>
-    {#if user.loggedIn}
-      <nav>
-        <a href="/game">Permainan</a>
-        <a href="/learn">Nota & Tutorial</a>
-        {#if user.role === 'teacher'}
-          <a href="/teacher">Dashboard Guru</a>
-        {:else}
-          <a href="/profile">Profil Pelajar</a>
+    <div class="flex flex-col place-items-center">
+      <div>
+        <h1 class="font-fun">
+          <span class="text-5xl">🎮</span>
+          <span class="text-5xl text-calm-orange">A</span>
+          <span class="text-5xl text-calm-green">l</span>
+          <span class="text-5xl text-calm-purple">g</span>
+          <span class="text-5xl text-calm-blue">e</span>
+          <span class="text-5xl text-calm-yellow">M</span>
+          <span class="text-5xl text-calm-green">a</span>
+          <span class="text-5xl text-calm-purple">s</span>
+          <span class="text-5xl text-calm-blue">t</span>
+          <span class="text-5xl text-calm-yellow">e</span>
+          <span class="text-5xl text-calm-green">r</span>
+        </h1>
+      </div>
+      <div>
+        {#if user.loggedIn}
+          {#if page.route.id === "/dashboard"}
+            <h1>Laman Utama</h1>
+          {:else if page.route.id === "/standard-pembelajaran/[slug]/games"}
+            <h1 class="text-white">Permainan</h1>
+          {:else if page.route.id === "/standard-pembelajaran/[slug]/notes"}
+            <h1>Pembelajaran</h1>
+          {:else if page.route.id === "/teacher"}
+            <h1>Teacher</h1>
+          {/if}
         {/if}
-        <span class="user-info">👤 {user.name} ({user.role})</span>
-      </nav>
-    {/if}
+      </div>
+    </div>
   </header>
 
-  <slot />  <!-- Ruangan untuk memuatkan kandungan halaman semasa -->
+  <main>
+    {#if hasMounted}
+      {@render children()}
+    {/if}
+  </main>
 
-  <style>
-    header {
-      background: #f8b400; /* warna jingga cerah */
-      padding: 1em;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      color: #ffffff;
-      font-size: 1.5em;
-    }
-    nav {
-      margin-top: 0.5em;
-    }
-    nav a {
-      margin: 0 1em;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
-    .user-info {
-      margin-left: 2em;
-      color: #fff;
-      font-style: italic;
-    }
-  </style>
-    
+  <footer class="flex place-content-center mt-auto">
+    {#if user.loggedIn}
+      <nav
+        class="text-black bg-secondary-100 w-[50%] rounded-3xl overflow-clip border-2 fixed bottom-10 z-80"
+      >
+        <ul class="flex">
+          <li class="w-full p-4">
+            <a href="/dashboard" class="hover:text-gray-400">
+              <p class="text-center">Rumah</p>
+            </a>
+          </li>
+          <li class="w-full p-4">
+            <a
+              href="/standard-pembelajaran/{user.currentMission}/notes"
+              class="hover:text-gray-400"
+            >
+              <p class="text-center">Belajar</p>
+            </a>
+          </li>
+          <li class="w-full p-4">
+            <a
+              href="/standard-pembelajaran/{user.currentMission}/games"
+              class="hover:text-gray-400"
+            >
+              <p class="text-center">Bermain</p>
+            </a>
+          </li>
+          <li class="w-full p-4">
+            <button
+              type="button"
+              class="hover:text-gray-400"
+              onclick={handleLogout}
+            >
+              <p class="text-center">Logout</p>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    {/if}
+  </footer>
+</div>

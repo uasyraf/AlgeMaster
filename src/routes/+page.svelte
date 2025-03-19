@@ -1,60 +1,84 @@
 <!-- src/routes/index.svelte - Halaman Log Masuk -->
 <script>
-    import { userStore } from '../stores/user.js';
-    import { goto } from '$app/navigation';
-    let username = "";
-    let password = "";
-    let role = "student";  // peranan default yang dipilih
+  import { userStore } from "../stores/user.js";
+  import { browser } from "$app/environment";
+  import { goto } from "$app/navigation";
+  import { PinInput } from "melt/builders";
+  import { onDestroy, onMount } from "svelte";
+  import { name } from "@melt-ui/svelte";
 
-    function handleLogin() {
-      // (Nota: Kod ini hanya simulasi. Dalam aplikasi sebenar, semakan kata laluan/peranan dibuat di server)
-      userStore.set({
-        name: username,
-        role: role,
-        loggedIn: true,
-        currentMission: 1,
-        score: 0,
-        badges: []
-      });
-      // Arahkan pengguna ke halaman sesuai selepas log masuk
-      if (role === 'teacher') {
-        goto('/teacher');   // guru ke dashboard guru
-      } else {
-        goto('/game');      // pelajar ke halaman permainan
-      }
+  let user = $state();
+
+  userStore.subscribe((value) => {
+    user = value;
+  });
+
+  onMount(() => {
+    if (user.loggedIn) goto("/dashboard");
+  });
+
+  let username = $state();
+  let password = $state();
+  let role = "student";
+
+  const pinInput = new PinInput({
+    maxLength: 6,
+    mask: true,
+    type: "numeric",
+    onValueChange: (value) => {
+      password = value;
+      if (pinInput.isFilled)
+        document.querySelector('button[type="submit"]').focus();
+    },
+  });
+
+  async function handleLogin() {
+    if (user.name.length === 0) {
+      user.name = username;
     }
-  </script>
+    user.loggedIn = true;
+    localStorage.setItem("userData", JSON.stringify(user));
+    window.location.href = "/dashboard";
+  }
+</script>
 
-  <main>
-    <h2>Log Masuk</h2>
-    <form on:submit|preventDefault={handleLogin}>
-      <div>
-        <label>Nama Pengguna:</label>
-        <input bind:value={username} type="text" required placeholder="Masukkan nama"/>
+<div class="w-full grid grid-cols-1 place-items-center h-full px-64 gap-8">
+  <div class="w-full flex place-content-center">
+    <div
+      class="flex place-content-center overflow-clip border-2 border-primary-800 w-[400px] h-[400px] rounded-[50%]"
+    >
+      <img class="object-cover" src="/Dinosaur.svg" alt="Playful Children" />
+    </div>
+  </div>
+  <form onsubmit={handleLogin}>
+    <div class="w-full grid grid-cols-1 gap-4 place-items-center">
+      <input
+        bind:value={username}
+        class="input-primary-lg w-120 border-0 focus:border-2 focus:border-primary-800"
+        type="text"
+        placeholder="Username"
+        required
+        aria-required="true"
+      />
+      <div
+        class="flex place-content-center font-mono gap-2 w-120"
+        {...pinInput.root}
+      >
+        {#each pinInput.inputs as input}
+          <input
+            class="w-full h-16 size-12 rounded-3xl bg-white text-center
+            border-0 focus:border-2 focus:border-primary-800 transition disabled:cursor-not-allowed"
+            required
+            aria-required="true"
+            {...input}
+          />
+        {/each}
       </div>
-      <div>
-        <label>Kata Laluan:</label>
-        <input bind:value={password} type="password" required placeholder="Masukkan kata laluan"/>
-      </div>
-      <div>
-        <label>Log masuk sebagai:</label>
-        <select bind:value={role}>
-          <option value="student">Pelajar</option>
-          <option value="teacher">Guru</option>
-        </select>
-      </div>
-      <button type="submit">Masuk</button>
-    </form>
-  </main>
-
-  <main>
-    
-  </main>
-
-  <style>
-    main { max-width: 400px; margin: 2em auto; background: #eef; padding: 1em; border-radius: 8px; }
-    h2 { text-align: center; color: #333; }
-    label { display: block; margin: 0.5em 0 0.2em; }
-    input, select { width: 100%; padding: 0.5em; margin-bottom: 1em; }
-    button { width: 100%; padding: 0.6em; background: #4CAF50; color: white; border: none; border-radius: 4px; font-size: 1em; }
-  </style>
+      <button
+        type="submit"
+        class="w-full text-size-2xl h-16 font-bold text-white mt-4 rounded-3xl bg-secondary-400 hover:scale-105 active:scale-100"
+        >Masuk</button
+      >
+    </div>
+  </form>
+</div>
