@@ -1,22 +1,15 @@
-import { preprocessMeltUI, sequence } from "@melt-ui/pp";
-import adapter from '@sveltejs/adapter-auto';
-/** @type {import('@sveltejs/kit').Config}*/
+import adapter from '@sveltejs/adapter-static';
 
-const dev = process.argv.includes('dev');
-const repoName = 'AlgeMaster'; // Change this to your GitHub repo name
-
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
-  kit: {
-    adapter: adapter({
-      // default options are shown. On some platforms
-      // these options are set automatically — see below
-      pages: 'build',
-      assets: 'build',
-      fallback: undefined,
-      precompress: false,
-      strict: true
-    })
-  },
-  preprocess: sequence([preprocessMeltUI()])
+	kit: {
+		adapter: adapter({
+			fallback: '404.html'
+		}),
+		paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		}
+	}
 };
+
 export default config;
