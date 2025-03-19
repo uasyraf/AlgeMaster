@@ -8,7 +8,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
-		"deploy": "gh-pages -d build"
+		"deploy": "vite build && gh-pages -d build"
 	},
 	"devDependencies": {
 		"@melt-ui/pp": "^0.3.2",
