@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/standard-pembelajaran/[slug]/notes/+page.svelte";
