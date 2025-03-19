@@ -30,7 +30,7 @@
       console.log("gag", page.route.id);
       console.log(base);
 
-      if (!user.loggedIn && page.route.id !== base + "/")
+      if (!user.loggedIn && base + page.route.id !== base + "/")
         window.location.href = base + "/";
     }
     hasMounted = true;
@@ -63,13 +63,13 @@
       </div>
       <div>
         {#if user.loggedIn}
-          {#if page.route.id === base + "/dashboard"}
+          {#if base + page.route.id === base + "/dashboard"}
             <h1>Laman Utama</h1>
-          {:else if page.route.id === base + "/standard-pembelajaran/[slug]/games"}
+          {:else if base + page.route.id === base + "/standard-pembelajaran/[slug]/games"}
             <h1 class="text-white">Permainan</h1>
-          {:else if page.route.id === base + "/standard-pembelajaran/[slug]/notes"}
+          {:else if base + page.route.id === base + "/standard-pembelajaran/[slug]/notes"}
             <h1>Pembelajaran</h1>
-          {:else if page.route.id === base + "/teacher"}
+          {:else if base + page.route.id === base + "/teacher"}
             <h1>Teacher</h1>
           {/if}
         {/if}
