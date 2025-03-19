@@ -7,7 +7,8 @@ const config = {
       fallback: '404.html'
     }),
     paths: {
-      base: "/AlgeMaster"
+      base: process.argv.includes('dev') ? '' : process.env.BASE_PATH,
+      assets: process.argv.includes('dev') ? '' : process.env.BASE_PATH,
     }
   }
 };
