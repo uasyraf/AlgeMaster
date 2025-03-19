@@ -1,7 +1,6 @@
 <script>
     import { userStore, hasAccessToMission } from "../../stores/user.js";
     import { missions } from "../../lib/missions.js";
-    import ScrollArea from "$lib/ScrollArea.svelte";
     import { onDestroy, onMount } from "svelte";
 
     let user = $state();
