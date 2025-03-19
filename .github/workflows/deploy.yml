@@ -2,8 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    # Comment
-    branches: "main"
+    branches: ["main"]
 
 jobs:
   build_site:
@@ -28,8 +27,6 @@ jobs:
         run: npm install
 
       - name: Build
-        env:
-          BASE_PATH: "/"
         run: npm run build
 
       - name: Upload Artifacts
