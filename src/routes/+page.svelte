@@ -3,9 +3,7 @@
   import { userStore } from "../stores/user.js";
   import { browser } from "$app/environment";
   import { goto } from "$app/navigation";
-  import { PinInput } from "melt/builders";
   import { onDestroy, onMount } from "svelte";
-  import { name } from "@melt-ui/svelte";
 
   let user = $state();
 
@@ -20,17 +18,6 @@
   let username = $state();
   let password = $state();
   let role = "student";
-
-  const pinInput = new PinInput({
-    maxLength: 6,
-    mask: true,
-    type: "numeric",
-    onValueChange: (value) => {
-      password = value;
-      if (pinInput.isFilled)
-        document.querySelector('button[type="submit"]').focus();
-    },
-  });
 
   async function handleLogin() {
     if (user.name.length === 0) {
@@ -60,20 +47,14 @@
         required
         aria-required="true"
       />
-      <div
-        class="flex place-content-center font-mono gap-2 w-120"
-        {...pinInput.root}
-      >
-        {#each pinInput.inputs as input}
-          <input
-            class="w-full h-16 size-12 rounded-3xl bg-white text-center
-            border-0 focus:border-2 focus:border-primary-800 transition disabled:cursor-not-allowed"
-            required
-            aria-required="true"
-            {...input}
-          />
-        {/each}
-      </div>
+      <input
+        bind:value={password}
+        class="input-primary-lg w-120 border-0 focus:border-2 focus:border-primary-800"
+        type="password"
+        placeholder="Password"
+        required
+        aria-required="true"
+      />
       <button
         type="submit"
         class="w-full text-size-2xl h-16 font-bold text-white mt-4 rounded-3xl bg-secondary-400 hover:scale-105 active:scale-100"
