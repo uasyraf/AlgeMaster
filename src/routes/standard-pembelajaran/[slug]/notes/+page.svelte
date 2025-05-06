@@ -20,19 +20,6 @@
                 3.
             </li>
         </ul>
-        <p>
-            📺 <strong>Video Berkaitan:</strong>
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/_fWI6s2yV9o?si=S9EU6kh1f_Ii_N_9"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-            ></iframe>
-        </p>
     </div>
 
     <div class="bg-secondary-100 p-8 rounded-3xl w-full flex flex-col gap-4">
@@ -67,7 +54,7 @@
             <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/b5U53S7_p8M?si=gls-dvHSUQdCo_f0"
+                src="https://www.youtube.com/embed/3J8xJ4-cFDo?si=i8x6lmSvff9i4mFk"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -102,7 +89,7 @@
             <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/UcskMZ0LqzA?si=Z6n8Va7s-sdgOKo3"
+                src="https://www.youtube.com/embed/UoNc5fxnns4?si=lZd-umO8hLDBM6yi"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -136,7 +123,7 @@
             <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/s7lgDqJPrek?si=8-F7-psr7EKErFiD"
+                src="https://www.youtube.com/embed/065veH9b0w4?si=8Oo8VVJTo3RVfuuY"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -181,7 +168,7 @@
             <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/h4wJajAXGEU?si=i05CE6DbqwzXdnLp"
+                src="https://www.youtube.com/embed/052B1csdR1k?si=YLuojAK13a8aqXW-"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -218,7 +205,7 @@
             <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/K30YWLSFBMQ?si=GEDhxh4hycBhmEVw"
+                src="https://www.youtube.com/embed/VT-NyGAu0v8?si=GcsU54OhKvYb6ZSN"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

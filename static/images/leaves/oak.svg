@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="35" height="35">
+    <!-- Oak leaf design -->
+    <path
+        d="M50 10 Q60 10 65 5 Q72 8 75 15 Q82 18 85 25 Q88 35 85 45 Q90 55 85 65 Q88 75 80 82 Q72 88 65 85 Q60 90 50 88 Q40 90 35 85 Q28 88 20 82 Q12 75 15 65 Q10 55 15 45 Q12 35 15 25 Q18 18 25 15 Q28 8 35 5 Q40 10 50 10"
+        fill="#c65102" stroke="#8b3600" stroke-width="1" />
+</svg>

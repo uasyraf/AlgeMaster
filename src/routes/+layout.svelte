@@ -7,6 +7,7 @@
   import { page } from "$app/state";
   import { goto } from "$app/navigation";
   import { base } from "$app/paths";
+  import AudioPermission from "../lib/components/AudioPermission.svelte";
 
   let { children } = $props();
   let user = $state();
@@ -42,6 +43,8 @@
     window.location.href = base + "/";
   }
 </script>
+
+<AudioPermission />
 
 <div class="flex flex-col min-h-screen">
   <header>

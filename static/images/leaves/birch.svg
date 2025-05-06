@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30">
+    <!-- Birch leaf design -->
+    <path d="M50 5 Q65 10 75 25 Q80 40 75 55 Q65 70 50 85 Q35 70 25 55 Q20 40 25 25 Q35 10 50 5"
+        fill="#f4a460" stroke="#cd853f" stroke-width="1" />
+    <path d="M50 5 L50 85" stroke="#cd853f" stroke-width="1" />
+</svg>
