@@ -7,63 +7,63 @@ export const missions = [
     subMissions: [
       {
         id: 1,
-        question: "Encik Azlan menderma RMx setiap bulan. Adakah x merupakan nilai yang tetap atau berubah?",
-        options: ["Tetap", "Berubah"],
-        answer: "Berubah",
+        question: "Gunakan huruf untuk mewakilkan umur anda sekarang. Apakah sifat nilai pemboleh ubah tersebut?",
+        options: ["Nilai tetap", "Nilai berubah"],
+        answer: "Nilai tetap",
       },
       {
         id: 2,
-        question: "Ali mempunyai y epal. Adakah y merupakan nilai yang tetap atau berubah?",
-        options: ["Tetap", "Berubah"],
-        answer: "Berubah",
+        question: "Huruf m mewakili bilangan adik-beradik anda. Bilangan ini ialah...",
+        options: ["Pemboleh ubah dengan nilai tetap", "Pemboleh ubah dengan nilai berubah"],
+        answer: "Pemboleh ubah dengan nilai tetap",
       },
       {
         id: 3,
-        question: "Siti membeli z buku setiap bulan. Adakah z merupakan nilai yang tetap atau berubah?",
-        options: ["Tetap", "Berubah"],
-        answer: "Berubah",
+        question: "Wakilkan bilangan pensel dalam bekas pensel anda hari ini dengan huruf p.",
+        options: ["Nilai tetap", "Nilai berubah"],
+        answer: "Nilai berubah",
       },
       {
         id: 4,
-        question: "Jumlah pelajar dalam kelas adalah n. Adakah n merupakan nilai yang tetap atau berubah?",
-        options: ["Tetap", "Berubah"],
-        answer: "Tetap",
+        question: "Huruf t mewakili masa perjalanan dari rumah ke sekolah setiap hari. Apakah sifat pemboleh ubah t?",
+        options: ["Nilai tetap", "Nilai berubah"],
+        answer: "Nilai berubah",
       },
       {
         id: 5,
-        question: "Harga sebiji epal adalah RMp. Adakah p merupakan nilai yang tetap atau berubah?",
-        options: ["Tetap", "Berubah"],
-        answer: "Tetap",
-      },
-      {
-        id: 6,
-        question: "Jumlah buku dalam perpustakaan adalah q. Adakah q merupakan nilai yang tetap atau berubah?",
-        options: ["Tetap", "Berubah"],
-        answer: "Tetap",
-      },
-      {
-        id: 7,
-        question: "Jumlah kereta di tempat letak kereta adalah r. Adakah r merupakan nilai yang tetap atau berubah?",
-        options: ["Tetap", "Berubah"],
-        answer: "Tetap",
-      },
-      {
-        id: 8,
-        question: "Jumlah wang dalam dompet adalah s. Adakah s merupakan nilai yang tetap atau berubah?",
+        question: "Wakilkan suhu dalam makmal sains sepanjang minggu dengan huruf s. Apakah jenis nilai pemboleh ubah ini?",
         options: ["Tetap", "Berubah"],
         answer: "Berubah",
       },
       {
+        id: 6,
+        question: "Huruf d mewakili jarak rumah Amran ke sekolah. Jarak ini ialah pemboleh ubah...",
+        options: ["Nilai tetap", "Nilai berubah"],
+        answer: "Nilai tetap",
+      },
+      {
+        id: 7,
+        question: "Jika k ialah kadar faedah simpanan tetap setahun di bank, maka k ialah...",
+        options: ["Nilai tetap", "Nilai berubah"],
+        answer: "Nilai tetap",
+      },
+      {
+        id: 8,
+        question: "Wakilkan harga sayur di pasar setiap hari dengan huruf h. Mengapakah h dianggap pemboleh ubah berubah?",
+        options: ["Harga bergantung kepada musim dan bekalan", "Harga sentiasa kekal sepanjang tahun"],
+        answer: "Harga bergantung kepada musim dan bekalan",
+      },
+      {
         id: 9,
-        question: "Jumlah jam dalam sehari adalah t. Adakah t merupakan nilai yang tetap atau berubah?",
-        options: ["Tetap", "Berubah"],
-        answer: "Tetap",
+        question: "Huruf x mewakili bilangan langkah yang diambil oleh pelajar sepanjang hari. Adakah x mempunyai nilai tetap atau berubah, dan kenapa?",
+        options: ["Tetap – kerana pelajar mengikut rutin yang sama", "Berubah – kerana bilangan langkah berbeza setiap hari"],
+        answer: "Berubah – kerana bilangan langkah berbeza setiap hari",
       },
       {
         id: 10,
-        question: "Jumlah hari dalam seminggu adalah u. Adakah u merupakan nilai yang tetap atau berubah?",
-        options: ["Tetap", "Berubah"],
-        answer: "Tetap",
+        question: "Dalam satu kelas, huruf m mewakili markah setiap pelajar dalam ujian Matematik. Apa sifat pemboleh ubah m, dan mengapa?",
+        options: ["Tetap – semua pelajar akan dapat markah yang sama", "Berubah – kerana prestasi pelajar adalah berbeza"],
+        answer: "Berubah – kerana prestasi pelajar adalah berbeza",
       },
     ],
     // Standard Pembelajaran 5.1.1: menggunakan huruf untuk mewakili kuantiti tidak diketahui & menentukan sifatnya
@@ -75,63 +75,63 @@ export const missions = [
     subMissions: [
       {
         id: 1,
-        question: "Sebuah beg mengandungi x blok kayu. Kemudian 3 blok kayu dimasukkan ke dalam beg. Apakah ungkapan algebra bagi jumlah blok kayu dalam beg sekarang?",
-        options: ["x + 3", "3x"],
-        answer: "x + 3"
+        question: "Tolak 8 daripada suatu nombor, n. Apakah ungkapan algebra yang mewakili situasi ini?",
+        options: ["8 − n", "n − 8"],
+        answer: "n − 8"
       },
       {
         id: 2,
-        question: "Ali mempunyai y epal. Kemudian dia membeli 5 epal lagi. Apakah ungkapan algebra bagi jumlah epal Ali sekarang?",
-        options: ["y + 5", "5y"],
-        answer: "y + 5"
+        question: "Jumlah dua nombor, a dan b. Apakah ungkapan algebra yang betul?",
+        options: ["a + b", "a × b"],
+        answer: "a + b"
       },
       {
         id: 3,
-        question: "Siti mempunyai z buku. Kemudian dia meminjam 2 buku lagi dari perpustakaan. Apakah ungkapan algebra bagi jumlah buku Siti sekarang?",
-        options: ["z + 2", "2z"],
-        answer: "z + 2"
+        question: "Darab suatu nombor x dengan 5.",
+        options: ["x + 5", "5x"],
+        answer: "5x"
       },
       {
         id: 4,
-        question: "Jumlah pelajar dalam kelas adalah n. Kemudian 4 pelajar baru mendaftar. Apakah ungkapan algebra bagi jumlah pelajar sekarang?",
-        options: ["n + 4", "4n"],
-        answer: "n + 4"
+        question: "Hasil tambah p dan q, kemudian dibahagi dengan 4.",
+        options: ["p + q ÷ 4", "(p + q)/4"],
+        answer: "(p + q)/4"
       },
       {
         id: 5,
-        question: "Harga sebiji epal adalah RMp. Jika Ali membeli 3 epal, apakah ungkapan algebra bagi jumlah harga epal yang dibeli?",
-        options: ["3p", "p + 3"],
-        answer: "3p"
+        question: "Ali membeli k buku pada harga RMh setiap satu. Apakah jumlah bayaran Ali?",
+        options: ["h + k", "hk"],
+        answer: "hk"
       },
       {
         id: 6,
-        question: "Jumlah buku dalam perpustakaan adalah q. Kemudian 10 buku baru ditambah. Apakah ungkapan algebra bagi jumlah buku sekarang?",
-        options: ["q + 10", "10q"],
-        answer: "q + 10"
+        question: "Jika 1 khemah boleh memuatkan 6 orang, berapakah jumlah orang untuk m khemah?",
+        options: ["6m", "m + 6"],
+        answer: "6m"
       },
       {
         id: 7,
-        question: "Jumlah kereta di tempat letak kereta adalah r. Kemudian 5 kereta lagi masuk. Apakah ungkapan algebra bagi jumlah kereta sekarang?",
-        options: ["r + 5", "5r"],
-        answer: "r + 5"
+        question: "Jumlah markah bagi dua ujian ialah x dan y. Cari purata markah.",
+        options: ["x + y ÷ 2", "(x + y)/2"],
+        answer: "(x + y)/2"
       },
       {
         id: 8,
-        question: "Jumlah wang dalam dompet adalah s. Kemudian Ali menambah RM20 lagi. Apakah ungkapan algebra bagi jumlah wang sekarang?",
-        options: ["s + 20", "20s"],
-        answer: "s + 20"
+        question: "Siti membeli m kg epal pada harga RMp sekilogram dan n kg oren pada harga RMq sekilogram. Cari jumlah bayaran.",
+        options: ["mp + nq", "mp + nq + mn"],
+        answer: "mp + nq"
       },
       {
         id: 9,
-        question: "Jumlah jam dalam sehari adalah t. Jika Ali tidur selama 8 jam, berapa jam yang tinggal untuk aktiviti lain?",
-        options: ["t - 8", "8t"],
-        answer: "t - 8"
+        question: "Umur Hafiz ialah h tahun. Umur adiknya ialah separuh umur Hafiz. Berapakah beza umur mereka?",
+        options: ["h − 2", "h − ½h"],
+        answer: "h − ½h"
       },
       {
         id: 10,
-        question: "Jumlah hari dalam seminggu adalah u. Jika Ali bekerja selama 5 hari, berapa hari yang tinggal untuk berehat?",
-        options: ["u - 5", "5u"],
-        answer: "u - 5"
+        question: "Farah membaca 5 muka surat sehari. Selepas d hari, berapa muka surat telah dibaca?",
+        options: ["5 + d", "5d"],
+        answer: "5d"
       },
     ],
     // Standard Pembelajaran 5.1.2: menerbitkan ungkapan algebra berdasarkan situasi
@@ -143,63 +143,63 @@ export const missions = [
     subMissions: [
       {
         id: 1,
-        question: "Jika x = 5, apakah nilai ungkapan 2x + 3?",
-        options: ["10", "13"],
-        answer: "13"
+        question: "Diberi x = 4, cari nilai bagi ungkapan 2x + 3.",
+        options: ["11", "10"],
+        answer: "11"
       },
       {
         id: 2,
-        question: "Jika y = 4, apakah nilai ungkapan y + 7?",
-        options: ["11", "12"],
-        answer: "11"
-      },
-      {
-        id: 3,
-        question: "Jika z = 3, apakah nilai ungkapan 3z + 2?",
-        options: ["9", "11"],
-        answer: "11"
-      },
-      {
-        id: 4,
-        question: "Jika n = 6, apakah nilai ungkapan n + 4?",
-        options: ["10", "11"],
-        answer: "10"
-      },
-      {
-        id: 5,
-        question: "Jika p = 2, apakah nilai ungkapan 5p?",
-        options: ["10", "12"],
-        answer: "10"
-      },
-      {
-        id: 6,
-        question: "Jika q = 7, apakah nilai ungkapan q + 3?",
-        options: ["10", "11"],
-        answer: "10"
-      },
-      {
-        id: 7,
-        question: "Jika r = 8, apakah nilai ungkapan 2r?",
-        options: ["16", "18"],
-        answer: "16"
-      },
-      {
-        id: 8,
-        question: "Jika s = 9, apakah nilai ungkapan s + 1?",
-        options: ["10", "11"],
-        answer: "10"
-      },
-      {
-        id: 9,
-        question: "Jika t = 10, apakah nilai ungkapan t - 2?",
+        question: "Diberi a = 3, b = 2, cari nilai bagi ab + b.",
         options: ["8", "9"],
         answer: "8"
       },
       {
+        id: 3,
+        question: "Diberi p = 6, hitung nilai bagi 5p − 4.",
+        options: ["26", "30"],
+        answer: "26"
+      },
+      {
+        id: 4,
+        question: "Diberi m = 7, n = 2, cari nilai bagi 2m + 3n.",
+        options: ["20", "23"],
+        answer: "23"
+      },
+      {
+        id: 5,
+        question: "Zara membeli m = 3 buku pada harga RMp = 12 setiap satu. Hitung jumlah bayaran.",
+        options: ["RM36", "RM15"],
+        answer: "RM36"
+      },
+      {
+        id: 6,
+        question: "Jika x = 5 dan y = 4, hitung nilai bagi (x + y)/3.",
+        options: ["3", "4"],
+        answer: "3"
+      },
+      {
+        id: 7,
+        question: "Encik Faiz membeli r = 4 kg ikan dengan harga RMp = 7.50/kg. Hitung jumlah bayaran.",
+        options: ["RM30.00", "RM29.50"],
+        answer: "RM30.00"
+      },
+      {
+        id: 8,
+        question: "Aina membaca 6 muka surat sehari selama d = 5 hari. Hitung jumlah muka surat dibaca.",
+        options: ["30", "25"],
+        answer: "30"
+      },
+      {
+        id: 9,
+        question: "Diberi umur Hazim h = 14, dan umur adiknya ialah ½h. Berapakah beza umur mereka?",
+        options: ["7 tahun", "10 tahun"],
+        answer: "7 tahun"
+      },
+      {
         id: 10,
-        question: "Jika u = 12, apakah nilai ungkapan u - 5?",
-        options: ["7", "8"],
-        answer: "7"
+        question: "Dua orang pelajar membeli kad raya. Ali: m = 8 kad, p = RM1.50 sekeping. Abu: n = 6 kad, p = RM1.50 sekeping. Cari beza bayaran mereka.",
+        options: ["RM3.00", "RM2.50"],
+        answer: "RM3.00"
       },
     ],
     // Standard Pembelajaran 5.1.3: menentukan nilai ungkapan algebra apabila nilai pemboleh ubah diberi
@@ -211,63 +211,63 @@ export const missions = [
     subMissions: [
       {
         id: 1,
-        question: "Dalam ungkapan 4x + 7, apakah pekali bagi x?",
-        options: ["4", "7"],
-        answer: "4"
+        question: "Kenal pasti bilangan sebutan bagi ungkapan algebra: 3x + 5",
+        options: ["1", "2"],
+        answer: "2"
       },
       {
         id: 2,
-        question: "Dalam ungkapan 5y + 3, apakah pekali bagi y?",
-        options: ["5", "3"],
-        answer: "5"
+        question: "Dalam ungkapan 7a - 2b, apakah dua sebutannya?",
+        options: ["7 dan -2", "7a dan 2b"],
+        answer: "7a dan 2b"
       },
       {
         id: 3,
-        question: "Dalam ungkapan 6z + 2, apakah pekali bagi z?",
-        options: ["6", "2"],
-        answer: "6"
+        question: "Dalam ungkapan x² + 6x + 9, berapakah jumlah sebutan algebra?",
+        options: ["2", "3"],
+        answer: "3"
       },
       {
         id: 4,
-        question: "Dalam ungkapan 7n + 1, apakah pekali bagi n?",
-        options: ["7", "1"],
-        answer: "7"
+        question: "Dalam ungkapan 4m - 3n + 2, apakah pekali bagi m?",
+        options: ["4", "-3"],
+        answer: "4"
       },
       {
         id: 5,
-        question: "Dalam ungkapan 8p + 4, apakah pekali bagi p?",
-        options: ["8", "4"],
-        answer: "8"
+        question: "Dalam ungkapan -6xy + 2x - y, nyatakan pekali bagi xy:",
+        options: ["-6", "2"],
+        answer: "-6"
       },
       {
         id: 6,
-        question: "Dalam ungkapan 9q + 5, apakah pekali bagi q?",
-        options: ["9", "5"],
-        answer: "9"
+        question: "Dalam ungkapan (5pq)/2 - r, apakah pekali bagi pq?",
+        options: ["5/2", "-r"],
+        answer: "5/2"
       },
       {
         id: 7,
-        question: "Dalam ungkapan 10r + 6, apakah pekali bagi r?",
-        options: ["10", "6"],
-        answer: "10"
+        question: "Dalam sebutan -9ab², apakah pekali bagi sebutan itu?",
+        options: ["-9", "-b²"],
+        answer: "-9"
       },
       {
         id: 8,
-        question: "Dalam ungkapan 11s + 7, apakah pekali bagi s?",
-        options: ["11", "7"],
-        answer: "11"
+        question: "Dalam ungkapan 3x - (y/2) + 4z, nyatakan semua sebutan.",
+        options: ["3x, y/2, 4z", "3x, y, z"],
+        answer: "3x, y/2, 4z"
       },
       {
         id: 9,
-        question: "Dalam ungkapan 12t + 8, apakah pekali bagi t?",
-        options: ["12", "8"],
-        answer: "12"
+        question: "Nyatakan pekali bagi y² dalam ungkapan -8xy².",
+        options: ["-8x", "y²"],
+        answer: "-8x"
       },
       {
         id: 10,
-        question: "Dalam ungkapan 13u + 9, apakah pekali bagi u?",
-        options: ["13", "9"],
-        answer: "13"
+        question: "Dalam ungkapan 2a + 3b - 5c + 7, berapakah jumlah sebutan yang mempunyai pemboleh ubah?",
+        options: ["3", "4"],
+        answer: "3"
       },
     ],
     // Standard Pembelajaran 5.1.4: mengenal pasti sebutan dalam suatu ungkapan algebra & menyatakan pekali
@@ -279,63 +279,63 @@ export const missions = [
     subMissions: [
       {
         id: 1,
-        question: "Dalam ungkapan 3x + 2y + 5x, apakah sebutan serupa?",
-        options: ["3x dan 5x", "2y dan 5x"],
-        answer: "3x dan 5x"
+        question: "Adakah 3x dan -2x sebutan serupa?",
+        options: ["Ya", "Tidak"],
+        answer: "Ya"
       },
       {
         id: 2,
-        question: "Dalam ungkapan 4a + 3b + 4a, apakah sebutan serupa?",
-        options: ["4a dan 4a", "3b dan 4a"],
-        answer: "4a dan 4a"
+        question: "Adakah 4y dan y² sebutan serupa?",
+        options: ["Ya", "Tidak"],
+        answer: "Tidak"
       },
       {
         id: 3,
-        question: "Dalam ungkapan 5m + 6n + 5m, apakah sebutan serupa?",
-        options: ["5m dan 5m", "6n dan 5m"],
-        answer: "5m dan 5m"
+        question: "Adakah -k dan 0.5k sebutan serupa?",
+        options: ["Ya", "Tidak"],
+        answer: "Ya"
       },
       {
         id: 4,
-        question: "Dalam ungkapan 7p + 8q + 7p, apakah sebutan serupa?",
-        options: ["7p dan 7p", "8q dan 7p"],
-        answer: "7p dan 7p"
+        question: "Adakah ab dan ba sebutan serupa?",
+        options: ["Ya", "Tidak"],
+        answer: "Ya"
       },
       {
         id: 5,
-        question: "Dalam ungkapan 9r + 10s + 9r, apakah sebutan serupa?",
-        options: ["9r dan 9r", "10s dan 9r"],
-        answer: "9r dan 9r"
+        question: "Adakah 2mn dan 2nm² sebutan serupa?",
+        options: ["Ya", "Tidak"],
+        answer: "Tidak"
       },
       {
         id: 6,
-        question: "Dalam ungkapan 11t + 12u + 11t, apakah sebutan serupa?",
-        options: ["11t dan 11t", "12u dan 11t"],
-        answer: "11t dan 11t"
+        question: "Adakah 4pqr dan -10qrp sebutan serupa?",
+        options: ["Ya", "Tidak"],
+        answer: "Ya"
       },
       {
         id: 7,
-        question: "Dalam ungkapan 13v + 14w + 13v, apakah sebutan serupa?",
-        options: ["13v dan 13v", "14w dan 13v"],
-        answer: "13v dan 13v"
+        question: "Adakah 3ab/2 dan -8bc sebutan serupa?",
+        options: ["Ya", "Tidak"],
+        answer: "Tidak"
       },
       {
         id: 8,
-        question: "Dalam ungkapan 15x + 16y + 15x, apakah sebutan serupa?",
-        options: ["15x dan 15x", "16y dan 15x"],
-        answer: "15x dan 15x"
+        question: "Adakah 5x²y dan -3xy² sebutan serupa?",
+        options: ["Ya", "Tidak"],
+        answer: "Tidak"
       },
       {
         id: 9,
-        question: "Dalam ungkapan 17z + 18a + 17z, apakah sebutan serupa?",
-        options: ["17z dan 17z", "18a dan 17z"],
-        answer: "17z dan 17z"
+        question: "Adakah 7rst dan 11trs sebutan serupa?",
+        options: ["Ya", "Tidak"],
+        answer: "Ya"
       },
       {
         id: 10,
-        question: "Dalam ungkapan 19b + 20c + 19b, apakah sebutan serupa?",
-        options: ["19b dan 19b", "20c dan 19b"],
-        answer: "19b dan 19b"
+        question: "Adakah -xy²z dan 4zy²x sebutan serupa?",
+        options: ["Ya", "Tidak"],
+        answer: "Ya"
       },
     ],
     // Standard Pembelajaran 5.1.5: mengenal pasti sebutan serupa dan sebutan tidak serupa
